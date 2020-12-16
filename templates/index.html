@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Webpack Test</title>
+</head>
+
+<body>
+    <div class="p-home">
+        <header class="header-serempre">
+            <div>
+                <img src="/dist/img/serempre.png" alt="logo">
+            </div>
+        </header>
+        <hr>
+        <div class="body-serempre">
+            <div class="row">
+                <div>
+                    <div class="imagen">
+                        <div class="ima-show mb-2">
+                            <img id="imageShow" src="/dist/img/part1.jpg" alt="">
+                        </div>
+                        <div id="carrusel" class="row-sm mb-3">
+                            <div class="ima-prev-view  ima-select" name="part1">
+                                <img src="/dist/img/part1.jpg" alt="part1">
+                            </div>
+                            <div class="ima-prev-view " name="part2">
+                                <img src="/dist/img/part2.jpg" alt="part2">
+                            </div>
+                            <div class="ima-prev-view " name="part3">
+                                <img src="/dist/img/part3.jpg" alt="part3">
+                            </div>
+                        </div>
+                        <div class="row-xs">
+                            <div class="caracter-icon">
+                                <img src="/dist/img/touch.svg" alt="">
+                                <span class="">Customizable Touch Controls</span>
+                            </div>
+                            <div class="caracter-icon">
+                                <img src="/dist/img/studio_monitoring.svg" alt="">
+                                <span class="">Built-in Equalizer</span>
+                            </div>
+                            <div class="caracter-icon">
+                                <img src="/dist/img/noise_cancellation.svg" alt="">
+                                <span class="">Active Noise Cancellation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="list">
+                    <div class="title-list mb-5"><span>New release</span>
+                        <h3>MOMENTUM True Wireless 2</h3>
+                        <h5>Earbuds that put sound first</h5>
+                    </div>
+                    <div class="price-list  mb-5"><span>Starting at</span>
+                        <h3>$295.95</h3>
+                    </div>
+                    <div class="mb-5">
+                        <button class="tablinks selected" data-link="Overview">Overview</button>
+                        <button class="tablinks" data-link="Features">Features</button>
+                        <button class="tablinks" data-link="Box">What's in the box?</button>
+                        <div id="Overview" class="tabcontent show">
+                            <p>For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere.
+                                With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing
+                                your everyday.</p>
+                        </div>
+                        <div id="Features" class="tabcontent">
+                            <p>From classic to contemporary, every musical genre is enhanced with the custom drivers of the new MOMENTUM Ture Wireless 2 headphones thanks to their deep bass, clear natural mids, and detailed highs. Plus, you can now personalize
+                                your listening experience with built-in EQs for amazing sound quality to suit your standards.</p>
+                        </div>
+                        <div id="Box" class="tabcontent">
+                            <ul>
+                                <li>Left wireless earbud (M3IETW2 L)</li>
+                                <li>Right wireless earbud (M3IETW2 R)</li>
+                                <li>Charging case (M3IETW2 C)</li>
+                                <li>4 Pairs of silicone ear tips (1 pair installed)</li>
+                                <li>10" USB charging cable (Type A USB on one end and USB-C on other end)</li>
+                                <li>Quick Guide</li>
+                                <li>Safety Guide</li>
+                                <li>Compliance Information</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mb-5" id="color-list">
+                        <h6>Choose your finish.</h6>
+                        <div class="row">
+                            <div tabindex="0" class="card-serempre border col-50 mr-2">
+                                <div>
+                                    <p>Ivory White</p>
+                                    <span>For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True.</span>
+                                </div>
+                            </div>
+                            <div tabindex="1" class="card-serempre border col-50 mr-2">
+                                <div>
+                                    <p>Matte Black</p>
+                                    <span>Of all of the celestial bodies that capture our attention and fascination as astronomers.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <span id="message-color" class="hidden">Choose an option</span>
+                    </div>
+                    <div id="warranty" class="mb-5">
+                        <h6>Would you like to add extended warranty coverage?.</h6>
+                        <div tabindex="0" class="card-serempre border mb-2 active" data-price="0">
+                            <div class="w-75">
+                                <p>2 years coverage</p>
+                                <span>For the past 75 years, Sennheiser has put sound first.</span>
+                            </div>
+                        </div>
+                        <div tabindex="1" class="card-serempre border mb-2" data-price="75">
+                            <div class="w-75">
+                                <p>3 years coverage</p>
+                                <span>For the past 75 years, Sennheiser has put sound first.</span>
+                            </div>
+                            <span class="extra-price">+ $75</span>
+                        </div>
+                    </div>
+                    <div id="features" class="mb-5">
+                        <h6>Features.</h6>
+                        <div tabindex="0" class="card-serempre border mb-2 active" data-price="0">
+                            <div class="w-75">
+                                <p>Voice Assistant support</p>
+                            </div>
+                        </div>
+                        <div tabindex="1" class="card-serempre border mb-2" data-price="25">
+                            <div class="w-75">
+                                <p>Customizable controls</p>
+                            </div><span class="extra-price">+ $25</span></div>
+                    </div>
+                    <div class="specifications-list mb-5">
+                        <h6>Specifications.</h6>
+                        <ul>
+                            <li>
+                                <p>Dimensions</p><span>76.8 x 43.8 x 34.7 mm (earbuds and charging case)</span></li>
+                            <li>
+                                <p>USB Standard</p><span>USB-C</span></li>
+                            <li>
+                                <p>Power supply</p><span>Sennheiser 7mm dynamic driver</span></li>
+                            <li>
+                                <p>Frequency response (Microphone)</p><span>100 Hz to 10 kHz</span></li>
+                            <li>
+                                <p>Frequency response</p><span>5 - 21,000 Hz</span></li>
+                            <li>
+                                <p>Noise cancellation</p><span>Single-Mic ANC per earbud side</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="miModal" class="modal">
+            <div class="modal-contenido">
+                <img src="/dist/img/shopping-cart.svg" alt="">
+                <p>Item added to shopping cart.</p>
+            </div>
+        </div>
+        <div class="footer-serempre">
+            <div class="container-footer">
+                <div class="col-data">
+                    <div class="card-serempre-info">
+                        <p>Free Shipping</p><span>Get 2-day free shipping anywhere in North America.</span></div>
+                    <div class="card-serempre-info">
+                        <p>2 years warranty</p><span>If anything goes wrong in the first two years, we'll replace it for free.</span></div>
+                </div>
+                <div class="card-total-serempre">
+                    <div class="card-serempre-info">
+                        <h2 id="priceTotal"></h2>
+                        <span class="always-show">Need financing? Learn more</span>
+                    </div>
+                    <div><button class="buy-now">Buy now</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Custom script -->
+    <script src="./../dist/js/main.bundle.js"></script>
+</body>
+
+</html>

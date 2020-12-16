@@ -1,0 +1,28 @@
+{
+    "data": {
+        "new": true,
+        "title": "MOMENTUM True Wireless 2",
+        "subtitle": "Earbuds that put sound first",
+        "price": 295.95,
+        "overview": "For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True Wireless 2 is no different. Thanks to leading audio technology and innovation, these new earbuds deliver the best listening experience anytime, anywhere. With improved ergonomics designed for full day wearing and refined touch controls for a more personalised experience, they have been finely crafted for the most discerning listener and aim to simplify your life by enhancing your everyday.",
+        "feacturesText": "From classic to contemporary, every musical genre is enhanced with the custom drivers of the new MOMENTUM Ture Wireless 2 headphones thanks to their deep bass, clear natural mids, and detailed highs. Plus, you can now personalize your listening experience with built-in EQs for amazing sound quality to suit your standards.",
+        "box": ["Left wireless earbud (M3IETW2 L)", "Right wireless earbud (M3IETW2 R)",
+            "Charging case (M3IETW2 C)",
+            "4 Pairs of silicone ear tips (1 pair installed)",
+            "10\" USB charging cable (Type A USB on one end and USB-C on other end)",
+            "Quick Guide",
+            "Safety Guide",
+            "Compliance Information"
+        ],
+        "color": [{ "name": "Ivory White", "description": "For the past 75 years, Sennheiser has put sound first. The new MOMENTUM True." },
+            { "name": "Matte Black", "description": "Of all of the celestial bodies that capture our attention and fascination as astronomers." }
+        ],
+        "warranty": [{ "key": "year2", "year": "2 years coverage", "description": "For the past 75 years, Sennheiser has put sound first.", "cost": 0 },
+            { "key": "year3", "year": "3 years coverage", "description": "For the past 75 years, Sennheiser has put sound first.", "cost": 75 }
+        ],
+        "features": [{ "key": "voice", "name": "Voice Assistant support", "cost": 0 }, { "key": "customizable", "name": "Customizable controls", "cost": 25 }],
+        "specifications": [{ "name": "Dimensions", "value": "76.8 x 43.8 x 34.7 mm (earbuds and charging case)" }, { "name": "USB Standard", "value": "USB-C" }, { "name": "Power supply", "value": "Sennheiser 7mm dynamic driver" },
+            { "name": "Frequency response (Microphone)", "value": "100 Hz to 10 kHz" }, { "name": "Frequency response", "value": "5 - 21,000 Hz" }, { "name": "Noise cancellation", "value": "Single-Mic ANC per earbud side" }
+        ]
+    }
+}

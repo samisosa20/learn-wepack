@@ -1,0 +1,136 @@
+{
+  "name": "frontendboilerplate",
+  "version": "1.0.0",
+  "description": "Frontend Boilerplate",
+  "keywords": [
+    "frontend",
+    "boilerplate"
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "author": {
+    "name": "Serempre",
+    "email": "info@serempre.com",
+    "url": "https://github.com/iamfelipe/scss-bolilerplate"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamfelipe/scss-bolilerplate"
+  },
+  "private": true,
+  "scripts": {
+    "dev:start": "webpack-dev-server --env.NODE_ENV=development --config=webpack.dev.js",
+    "prod:build": "webpack --env.NODE_ENV=production --progress --config=webpack.prod.js",
+    "prettier": "prettier --write front-src/**/*.{js,scss}",
+    "dev:test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "front-src/**/*.{js,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.12.10",
+    "@babel/runtime": "^7.9.6",
+    "alpinejs": "^2.3.3",
+    "bootstrap": "^4.4.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "dotenv": "^8.2.0",
+    "family.scss": "^1.0.8",
+    "imagemin": "^7.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.1.0",
+    "moment": "^2.25.3",
+    "postcss-preset-env": "^6.7.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "stickybits": "^3.7.7",
+    "tailwindcss": "^1.4.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.12.10",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.2.2",
+    "core-js": "^2.6.11",
+    "css-loader": "^3.5.3",
+    "eslint": "^7.0.0",
+    "eslint-loader": "^4.0.2",
+    "file-loader": "^6.0.0",
+    "git-rev-sync": "^2.0.0",
+    "husky": "^4.2.5",
+    "img-loader": "^3.0.1",
+    "jest": "^26.0.1",
+    "lint-staged": "^10.2.11",
+    "mini-css-extract-plugin": "^0.9.0",
+    "modularscale-sass": "^3.0.10",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "tailwind-css-variables": "^2.0.3",
+    "tailwindcss-truncate-multiline": "^1.0.3",
+    "terser-webpack-plugin": "^3.0.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-build-notifier": "^0.1.32",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-manifest-plugin": "^2.2.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-notifier": "^1.8.0"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "rules": {
+      "semi": [
+        "error",
+        "always"
+      ],
+      "quotes": [
+        "error",
+        "double"
+      ]
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "jquery": true
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "extends": [
+      "eslint:recommended"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "prettier": {
+    "semi": true,
+    "trailingComma": "es5",
+    "printWidth": 70
+  }
+}
