@@ -38,6 +38,7 @@
     "@babel/preset-react": "^7.12.10",
     "@babel/runtime": "^7.9.6",
     "alpinejs": "^2.3.3",
+    "autoprefixer": "^10.1.0",
     "bootstrap": "^4.4.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
@@ -49,11 +50,12 @@
     "imagemin-optipng": "^7.1.0",
     "imagemin-svgo": "^7.1.0",
     "moment": "^2.25.3",
+    "postcss": "^8.2.1",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "stickybits": "^3.7.7",
-    "tailwindcss": "^1.4.6"
+    "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

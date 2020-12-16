@@ -1,24 +1,33 @@
 // Import custom styles
 import "@/src/css/main.scss";
 
+import "@/src/assets/static/part1.jpg";
+import "@/src/assets/static/part2.jpg";
+import "@/src/assets/static/part3.jpg";
+import "@/src/assets/static/serempre.png";
+import "@/src/assets/static/noise_cancellation.svg";
+import "@/src/assets/static/shopping-cart.svg";
+import "@/src/assets/static/studio_monitoring.svg";
+import "@/src/assets/static/touch.svg";
+
 const totalPrice = 295.95;
-const articleImgs = document.querySelectorAll(
-    "#carrusel .ima-prev-view"
-);
+const articleImgs = document.querySelectorAll("#carrusel .flex");
 const articleTabs = document.querySelectorAll(".tablinks");
 const articleWarranty = document.querySelectorAll(
-    "#warranty .card-serempre"
+    "#warranty .border-gray-200"
 );
 const articleFeatures = document.querySelectorAll(
-    "#features .card-serempre"
+    "#features .border-gray-200"
 );
 const articleColor = document.querySelectorAll(
-    "#color-list .card-serempre"
+    "#color-list .border-gray-200"
 );
 
 const calPrice = () => {
     let price = 0;
-    const articuleActive = document.querySelectorAll(".active");
+    const articuleActive = document.querySelectorAll(
+        ".border-blue-400"
+    );
     articuleActive.forEach((tab) => {
         if (tab.attributes["data-price"]) {
             price += parseFloat(tab.attributes["data-price"].value);
@@ -29,70 +38,109 @@ const calPrice = () => {
 };
 const imagenPreView = (e) => {
     const targetImg = e.target;
-    const parentElement = targetImg.closest("#carrusel .ima-prev-view");
+    const parentElement = targetImg.closest("#carrusel .flex");
     articleImgs.forEach((ima) => {
         ima
-            .closest("#carrusel .ima-prev-view")
-            .classList.remove("ima-select");
+            .closest("#carrusel .flex")
+            .classList.remove("hover:border-blue-600");
+        ima
+            .closest("#carrusel .flex")
+            .classList.remove("border-blue-400");
     });
     document.getElementById("imageShow").src = targetImg.src;
-    parentElement.classList.add("ima-select");
+    parentElement.classList.add("hover:border-blue-600");
+    parentElement.classList.add("border-blue-400");
 };
 const viewTab = (e) => {
     const targetTab = e.target;
     const tabLink = e.target.attributes["data-link"].value;
     const parentElement = targetTab.closest(".tablinks");
     articleTabs.forEach((tab) => {
-        tab.closest(".tablinks").classList.remove("selected");
+        tab.closest(".tablinks").classList.add("hover:text-gray-700");
+        tab.closest(".tablinks").classList.add("text-gray-600");
+        tab.closest(".tablinks").classList.remove("text-black");
+        tab.closest(".tablinks").classList.remove("border-black");
+        tab.closest(".tablinks").classList.remove("border-b");
     });
     document.querySelectorAll(".tabcontent").forEach((Content) => {
-        Content.closest(".tabcontent").classList.remove("show");
+        Content.closest(".tabcontent").classList.add("hidden");
     });
-    document.getElementById(tabLink).classList.add("show");
-    parentElement.classList.add("selected");
+    document.getElementById(tabLink).classList.remove("hidden");
+    parentElement.classList.remove("hover:text-gray-700");
+    parentElement.classList.add("text-black");
+    parentElement.classList.remove("text-gray-600");
+    parentElement.classList.add("border-black");
+    parentElement.classList.add("border-b");
 };
 const selectColor = (e) => {
     const targetTab = e.target;
-    const parentElement = targetTab.closest(".card-serempre");
+    const parentElement = targetTab.closest(".border-gray-200");
     articleColor.forEach((tab) => {
-        tab.closest(".card-serempre").classList.remove("active");
+        tab
+            .closest(".border-gray-200")
+            .classList.remove("border-blue-400");
+        tab
+            .closest(".border-gray-200")
+            .classList.remove("hover:border-blue-500");
+        tab
+            .closest(".border-gray-200")
+            .classList.add("hover:border-gray-400");
     });
-    parentElement.classList.add("active");
+    parentElement.classList.add("border-blue-400");
+    parentElement.classList.add("hover:border-blue-500");
+    parentElement.classList.remove("hover:border-gray-400");
 };
 const selectWarra = (e) => {
     const targetTab = e.target;
-    const parentElement = targetTab.closest(".card-serempre");
+    const parentElement = targetTab.closest(".border-gray-200");
     articleWarranty.forEach((tab) => {
-        tab.closest(".card-serempre").classList.remove("active");
+        tab
+            .closest(".border-gray-200")
+            .classList.remove("border-blue-400");
+        tab
+            .closest(".border-gray-200")
+            .classList.remove("hover:border-blue-500");
     });
-    parentElement.classList.add("active");
+    parentElement.classList.add("border-blue-400");
+    parentElement.classList.add("hover:border-blue-500");
     calPrice();
 };
 const selectFea = (e) => {
     const targetTab = e.target;
-    const parentElement = targetTab.closest(".card-serempre");
+    const parentElement = targetTab.closest(".border-gray-200");
     articleFeatures.forEach((tab) => {
-        tab.closest(".card-serempre").classList.remove("active");
+        tab
+            .closest(".border-gray-200")
+            .classList.remove("border-blue-400");
+        tab
+            .closest(".border-gray-200")
+            .classList.remove("hover:border-blue-500");
     });
-    parentElement.classList.add("active");
+    parentElement.classList.add("border-blue-400");
+    parentElement.classList.add("hover:border-blue-500");
     calPrice();
 };
 const verify = () => {
-    const articuleActive = document.querySelectorAll(".active");
-    if (articuleActive.length < 3) {
+    const articuleActive = document.querySelectorAll(
+        ".border-blue-400"
+    );
+    if (articuleActive.length < 4) {
         document
             .querySelector("#message-color")
             .classList.remove("hidden");
-        document
-            .querySelector("#message-color")
-            .classList.add("is-invalid");
     } else {
         document.querySelector("#message-color").classList.add("hidden");
-        document.querySelector("#miModal").classList.add("modal-show");
+        document
+            .querySelector("#miModal")
+            .classList.add("pointer-events-auto");
+        document.querySelector("#miModal").classList.add("opacity-100");
         setTimeout(() => {
             document
                 .querySelector("#miModal")
-                .classList.remove("modal-show");
+                .classList.remove("pointer-events-auto");
+            document
+                .querySelector("#miModal")
+                .classList.remove("opacity-100");
         }, 2000);
     }
 };
